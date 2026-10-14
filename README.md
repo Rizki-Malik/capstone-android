@@ -1,6 +1,6 @@
 # Game Catalog
 
-[![<ORG_NAME>](https://circleci.com/gh/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg)](https://circleci.com/gh/<ORG_NAME>/<PROJECT_NAME>)
+[![Rizki-Malik](https://circleci.com/gh/Rizki-Malik/capstone-android.svg?style=svg)](https://circleci.com/gh/Rizki-Malik/capstone-android)
 
 Aplikasi katalog game yang mengambil data dari [RAWG API](https://rawg.io/apidocs). Project ini dibuat untuk submission Capstone Akhir kelas Menjadi Android Developer Expert di Dicoding.
 
