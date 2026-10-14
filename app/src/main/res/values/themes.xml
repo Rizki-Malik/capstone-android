@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GameCatalog" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/purple_100</item>
+        <item name="colorOnPrimaryContainer">@color/purple_900</item>
+        <item name="colorSecondary">@color/orange_500</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="floatingActionButtonStyle">@style/Widget.GameCatalog.FloatingActionButton</item>
+        <item name="android:statusBarColor">@color/purple_700</item>
+    </style>
+
+    <style name="Theme.GameCatalog" parent="Base.Theme.GameCatalog" />
+
+    <style name="Widget.GameCatalog.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/orange_500</item>
+    </style>
+</resources>

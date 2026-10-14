@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="image_placeholder">#FF3A3A4A</color>
+    <color name="rating_background">#B3000000</color>
+    <color name="rating_star">#FFFFC107</color>
+</resources>
