@@ -1,6 +1,8 @@
 package com.dicoding.gamecatalog
 
+import android.os.Build
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -31,6 +33,20 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.bottomNavigation.setupWithNavController(navController)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (navController.previousBackStackEntry != null) {
+                    navController.popBackStack()
+                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q && isTaskRoot) {
+                    // Android 10 menahan MainActivity lewat IRequestFinishCallback (terdeteksi LeakCanary)
+                    finishAfterTransition()
+                } else {
+                    isEnabled = false
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            }
+        })
     }
 
     override fun onSupportNavigateUp(): Boolean {
